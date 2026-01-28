@@ -21,3 +21,18 @@ Project Aegis is a **self-healing, AI-powered Kubernetes platform** that combine
 ---
 
 ## 🧠 High-Level Architecture
+Developer → GitHub → GitHub Actions → Container Registry
+↓
+ArgoCD (GitOps)
+↓
+Kubernetes (EKS)
+↓
+Prometheus / Loki / Tempo → Alertmanager
+↓
+Python AIOps Agent
+↓
+K8sGPT + LLM (Root Cause)
+↓
+Slack Approval / Auto Fix
+↓
+Git Commit → ArgoCD Sync
